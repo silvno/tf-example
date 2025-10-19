@@ -23,3 +23,10 @@ module "realtime_processing" {
   name   = var.name
   datacenter  = var.datacenter
 }
+
+module "export" {
+  source = "../export"
+  count  = var.enable_realtime ? 1 : 0
+  name   = var.name
+  datacenter  = var.datacenter
+}

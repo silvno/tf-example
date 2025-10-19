@@ -1,7 +1,7 @@
 
 locals {
   customers = [
-    { name = "AcmeCorp", enable_batch = true, enable_realtime = true, datacenter = "frankfurt" },
+    { name = "AcmeCorp", enable_batch = false, enable_realtime = true, datacenter = "frankfurt" },
     { name = "BetaInc", enable_batch = false, enable_realtime = true, datacenter = "virginia" }
   ]
 }
