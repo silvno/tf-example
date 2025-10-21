@@ -1,6 +1,6 @@
-# DMP SaaS Datacenter Terraform Project
+# SaaS Provisioning in Terraform 
 
-This Terraform project demonstrates a **single-tenant multi-customer DMP (Data Management Platform) SaaS architecture**, using `local_file` resources to simulate APIs and processing components. Each customer gets a **full isolated instance** of the SaaS.
+This repository demonstrates a **single-tenant multi-customer DMP (Data Management Platform) SaaS architecture**, using `local_file` resources to simulate APIs and processing components. Each customer gets a **full isolated instance** of the SaaS.
 
 * **`api-data-collection`** module: Simulates the data collection API.
 * **`api-activation`** module: Simulates the activation API.
@@ -20,17 +20,11 @@ terraform init
 2. Preview the plan:
 
 ```bash
-terraform plan
+terraform plan -out plan
 ```
 
 3. Apply the configuration to create resources:
 
 ```bash
-terraform apply
-```
-
-4. Destroy resources when done:
-
-```bash
-terraform destroy
+terraform apply "plan"
 ```
